@@ -23,15 +23,15 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
+	maven {
+		url "https://raw.github.com/bufferings/thymeleaf3-spring-boot/mvn-repo/"
+	}
 	mavenCentral()
 }
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.springframework.boot:spring-boot-configuration-processor')
-	compile('org.thymeleaf:thymeleaf-spring4:3.0.0.RELEASE')
+	compile("jp.gr.java_conf.bufferings:thymeleaf3-spring-boot:0.0.1")
 	compile("org.springframework.boot:spring-boot-devtools")
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
