@@ -32,7 +32,7 @@ repositories {
 
 dependencies {
 	compile("jp.gr.java_conf.bufferings:thymeleaf3-spring-boot:0.0.1")
-	compile("org.springframework.boot:spring-boot-devtools")
+//	compile("org.springframework.boot:spring-boot-devtools")
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
 
@@ -43,6 +43,6 @@ eclipse {
 	}
 }
 
-bootRun {
-	addResources = true
-}
+//bootRun {
+//	addResources = true
+//}
