@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class GreetingController {
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     public String hello(Model model) {
         model.addAttribute("name", "Hijiri");
         return "greeting";
