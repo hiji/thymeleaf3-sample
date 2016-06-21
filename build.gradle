@@ -28,13 +28,20 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile("jp.gr.java_conf.bufferings:thymeleaf3-spring-boot:0.0.1")
-	compile("org.thymeleaf:thymeleaf-spring4:3.0.0.RELEASE")
-	compile("org.thymeleaf:thymeleaf:3.0.0.RELEASE")
+//	compile("org.thymeleaf:thymeleaf-spring4:3.0.0.RELEASE")
+//	compile("org.thymeleaf:thymeleaf:3.0.0.RELEASE")
 //	compile("org.springframework.boot:spring-boot-devtools")
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
+}
+
+configurations.all {
+	resolutionStrategy.eachDependency { details ->
+		if (details.requested.group == 'org.thymeleaf') {
+			details.useVersion '3.0.0.RELEASE'
+		}
+	}
 }
 
 eclipse {
