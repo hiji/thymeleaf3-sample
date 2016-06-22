@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class GreetingController {
     @RequestMapping("/hello")
     public String hello(Model model) {
-        model.addAttribute("name", "Hijiri");
+        model.addAttribute("name", "Hijiree");
         return "greeting";
     }
 }
